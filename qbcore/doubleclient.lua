@@ -1,4 +1,4 @@
-There is my own code for double connect checking and kick players. 
+-- mijn eigen code voor Double Connect Controle en Kick-spelers.
 RegisterNetEvent('QBCore:CheckForDoubleConnect', function()
     -- print('Updating Player', hungerRate, thirstRate)
     -- print('START EVENT ON DOUBLE CONNECT')
@@ -25,7 +25,7 @@ RegisterNetEvent('QBCore:CheckForDoubleConnect', function()
                     -- print('ADDED TMP LICENSE', tmpLicenseId)
                     if tmpLicenseId > 1 then
                         -- print('MORE THEN 1 LIC', tmpLicenseId)
-                        DropPlayer(src, 'TRYING TO DOUBLE CONNECT!')
+                        DropPlayer(src, 'Proberen te verbinden met 2 accounts!')
                     end
                 end
             end
@@ -42,6 +42,6 @@ CreateThread(function()
     end
 end)
 
-qb-core->client->loops.lua
-Set it on timer coz some cheaters can disable some server and client events like connect or something like that. 
-0 false checking.
+-- qb-core->client->loops.lua
+-- Set it on timer coz some cheaters can disable some server and client events like connect or something like that. 
+-- 0 false checking.

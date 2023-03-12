@@ -2,8 +2,8 @@ A simple snippet with which you can add a voice circle for pma-voice and set a c
 
 Preview: https://streamable.com/gt1gth
 
-Example: 
-Create a new file under pma-voice > client > utils called rangeCircle.lua 
+Vb: 
+maak een nieuwe file under pma-voice > client > utils called rangeCircle.lua 
 local color = {
     {171, 250, 75}, -- 1.5
     {250, 221, 75}, -- 3.0

@@ -1,7 +1,7 @@
-As already described in the title, I have a small snippet for you with which you can display the uptime of your server in the server browser
+-- Zoals reeds in de titel beschreven, heb ik een klein fragment voor u waarmee u de uptime van uw server in de serverbrowser kunt weergeven
 
-Example: 
-Create a new file under qb-smallresources > server called uptime.lua 
+-- Voorbeeld:
+-- Maak een nieuw bestand onder QB-SmallResources> Server genaamd Uptime.lua
 local start = os.time()
 
 CreateThread(function()

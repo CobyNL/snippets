@@ -1,4 +1,4 @@
--- vervang het oude in functions.lua client naar deze
+-- vervang het oude deel in functions.lua client naar deze
 
 function ESX.ShowNotification(message, type, length)
     local position = Config.NotifyPosition
@@ -9,7 +9,7 @@ function ESX.ShowNotification(message, type, length)
         return exports["esx_notify"]:Notify(type, length, message)
     end
 
-    print("[^1ERROR^7] ^5ESX Ox_lib^7 is niet gevonden of niet gestart voor es_extended!")
+    print("[^1ERROR^7] ^5Ox_lib^7 is niet gevonden of niet gestart voor es_extended!")
 end
     
     

@@ -1,49 +1,44 @@
-Change Citizen ID formatting and Weapon Serial Numbers
-Paru
-OP
- — 27-02-2023 22:01
-So it was requested by a user here that I post a code snippet for you guys to use to change how weapon serial numbers and citizen ID's are produced, this snippet can be applied literally anywhere that contains randomly generated strings.
+-- Change Citizen ID formatting and Weapon Serial Numbers
+-- Dus hier werd door een gebruiker gevraagd dat ik een codefragment voor jullie post om te gebruiken om te wijzigen hoe wapenserienummers en burger -ID's worden geproduceerd, dit fragment kan letterlijk overal worden toegepast dat willekeurig gegenereerde strings bevat.
+-- Voor Citizen ID's open qb-core/server/player.lua en zoek voor
 
-For Citizen ID's open qb-core/server/player.lua and search for 
 function QBCore.Player.CreateCitizenId()
 
-look at the photographed section and you'll note yours will look different, if you want randomly generated numbers up to 6 randomly generated numbers then use math.random(111111, 999999) after the = section.
+-- Kijk naar het gefotografeerde gedeelte en je merkt op dat de jouwe er anders uitziet, als je willekeurig gegenereerde nummers tot 6 willekeurig gegenereerde nummers wilt, gebruik dan 
+Math.Random (111111, 999999) na de = sectie.
 
-https://i.imgur.com/pInDCoS.png
+-- https://i.imgur.com/pInDCoS.png
 
-Weapon Serials
-For weapon serials I have mine generate 3 random uppercase letters and 3 random numbers, in my opinion this is much easier to read on the eyes, this is a lengthy one though and requires code modification in the inventory as well.
+-- Weapon Serials
+-- Voor wapenseries heb ik de mijne die 3 willekeurige hoofdletters en 3 willekeurige getallen genereren, naar mijn mening is dit veel gemakkelijker om op de ogen te lezen, dit is echter een langdurige en vereist ook codemodificatie in de inventaris.
 
-Code Modification for QB-Core
-For QB Core access the same file as the Citizen ID generation above
-qb-core/server/player.lua - At the very bottom
+-- Codemodificatie voor QB-core
+-- Voor QB Core Access hetzelfde bestand als de generatie van de burger -ID hierboven
+-- qb-core/server/player.lua - Helemaal beneden
+-- zoek voor
 
-Search for 
 QBCore.Player.CreateSerialNumber()
 
-You'll note it'll be considerably longer than mine.
-Again photographed below is what mine currently looks like.
-If you want it the same as mine ABC-123 then copy this snippet SerialNumber = QBCore.Shared.RandomStr(3):upper() .. "-" .. QBCore.Shared.RandomInt(3)
+-- Je zult opmerken dat het aanzienlijk langer zal zijn dan de mijne.
+-- Opnieuw hieronder gefotografeerd is hoe de mijne er momenteel uitziet.
+-- Als je het hetzelfde wilt als mijn ABC-123, kopieer dit fragment 
 
-https://i.imgur.com/9w2OkKD.png
+serialNumber = qbcore.shared.randomstr (3): upper () .. "-" .. qbcore.shared.randomint (3)
 
-Inventory Modification
+-- - https://i.imgur.com/9w2okkd.png
 
-Search for every single line in the inventory that uses serie in inventory/server/main.lua, for the or statements simply paste the same code as above to use ABC-123  same for info.serie =
+-- Inventory Modification
 
-https://i.imgur.com/uycpCd0.png
+-- Zoek naar elke regel in de inventaris die Serie gebruikt in inventaris/server/main.lua, voor de of instructies plakken eenvoudig dezelfde code als hierboven om ABC-123 hetzelfde te gebruiken voor info.serie =
+-- https://i.imgur.com/uycpCd0.png
 
-https://i.imgur.com/NvqFEZc.png
+-- https://i.imgur.com/NvqFEZc.png
 
-And that's it! You've modified both the QB Core Citizen ID's to generate 6 random numbers and the Weapon serial numbers to generate as ABC-123!
-
-
-
+-- En dat is het!U hebt zowel de QB-kernburger-ID's aangepast om 6 willekeurige getallen en de serienummers van het wapen te genereren om te genereren als ABC-123!
 
 
 
-
--- Making CitizenID to count in numbers 
+-- Citizenid maken om in cijfers te tellen
 local CitizenId = 0 
 function QBCore.Player.CreateCitizenId()
     local UniqueFound = false
