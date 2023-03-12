@@ -1,3 +1,5 @@
+-- vervang het oude in functions.lua client naar deze
+
 function ESX.ShowNotification(message, type, length)
     local position = Config.NotifyPosition
     if type == 'info' then type = 'inform' end
@@ -32,7 +34,7 @@ function ESX.HideUI()
     print("[^1ERROR^7] ^5ESX TextUI^7 is Missing!")
 end
 
--- Config
+-- Zet deze in de Config van es_extended
 
 Config.NotifyPosition = 'top-right'
 Config.TextUI = 'left-center'
