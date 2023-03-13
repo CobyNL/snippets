@@ -16,7 +16,7 @@ CreateThread(function()
         if hrs > 0 then
             uptimeString = string.format("%d:%02d", hrs, mins)
         else
-            uptimeString = string.format("%d minutes", mins)
+            uptimeString = string.format("%d minuten", mins)
         end
 
         SetConvarServerInfo('Uptime', uptimeString)
