@@ -1,4 +1,4 @@
--- Map Animation --
+-- Map Animatie --
 local inMenuMode = false
 local emote = false
 local renewedWeaponCarry = true -- If using Renewed-WeaponsCarry
